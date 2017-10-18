@@ -8,6 +8,6 @@ describe 'Battleships' do
 
   it "initializes with an array of 4x4 0's" do
     battleships = Battleships.new
-    expect(battleships.grid).to eq("0 0\n0 0")
+    expect(battleships.grid).to eq("0 0 0 0 0 0 0 0 0 0\n")
   end
 end
