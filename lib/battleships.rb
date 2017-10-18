@@ -1,5 +1,7 @@
 class Battleships
   def grid
-    puts "0 0 0 0 0 0 0 0 0 0\n"
+    10.times do
+      puts "0 0 0 0 0 0 0 0 0 0\n"
+    end
   end
 end
