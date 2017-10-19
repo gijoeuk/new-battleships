@@ -6,8 +6,8 @@ describe 'Battleships' do
       expect(battleships).to be_instance_of(Battleships)
     end
 
-  it "initializes with an array of 4x4 0's" do
+  it "initializes with an array of 10x10 dots" do
     battleships = Battleships.new
-    expect(battleships.grid).to eq([0,0,0,0,0,0,0,0,0,0])
+    expect(battleships.grid).to eq('..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........')
   end
 end
