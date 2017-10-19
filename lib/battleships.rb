@@ -3,8 +3,8 @@ class Battleships
     @board = "..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n.........."
   end
 
-  def place_ship(index)
-    @board[index]= "X"
+  def place_ship_horizontal(index)
+    @board[index..(index+2)]= "XXX"
     @board
   end
 end
