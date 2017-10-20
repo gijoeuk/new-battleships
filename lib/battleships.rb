@@ -4,13 +4,25 @@ class Battleships
   end
 
   def place_ship_horizontal(index)
-      if index % 10 > 7
+      if index % 10 > 8
         "Cannot place ship ouf of bounds. Try again"
       else
         @board[index..(index+2)]= "OOO"
         @board
       end
     end
+
+  def place_ship_vertical(index)
+    if index > 76
+      "Cannot place ship ouf of bounds. Try again"
+    else
+      3.times do
+        @board[index] = "O"
+        index += 11
+      end
+      @board
+    end
+  end
 end
 
 # evens = (1..10).each_with_object([]) { |i, a| a << i*2 }

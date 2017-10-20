@@ -4,6 +4,14 @@ To set up game, player will need to;
 open irb and require './lib/battleships.rb'
 and then create a new game using 'game = Game.new'
 
+You will then see a grid of dots that make up your board
+the indexs of these dots will be as follows
+
+use battleships.place_ship_horizontal(index) to place a ship horizontally.
+Pass in the index where you want to place the ship. The ship will be 3 cells long and will
+be placed in your index and the two cells to the left, so be careful not to overlap
+
+
 https://github.com/gijoeuk/battleships-techtest-ruby.git
 
 As a player

@@ -22,4 +22,10 @@ describe 'Battleships' do
     battleships.create_grid
     expect(battleships.place_ship_horizontal(9)).to eq("Cannot place ship ouf of bounds. Try again")
   end
+  
+  it 'has a method to allow you to place a vertical ship' do
+    battleships = Battleships.new
+    battleships.create_grid
+    expect(battleships.place_ship_vertical(0)).to eq("O.........\nO.........\nO.........\n..........\n..........\n..........\n..........\n..........\n..........")
+  end
 end
