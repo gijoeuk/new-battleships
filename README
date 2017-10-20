@@ -1,5 +1,9 @@
 # battleships-techtest-ruby
 
+To set up game, player will need to;
+open irb and require './lib/battleships.rb'
+and then create a new game using 'game = Game.new'
+
 https://github.com/gijoeuk/battleships-techtest-ruby.git
 
 As a player

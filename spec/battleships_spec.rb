@@ -11,15 +11,15 @@ describe 'Battleships' do
     expect(battleships.create_grid).to eq("..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........")
   end
 
-  # it 'has a method to allow you to place a single cell ship' do
-  #   battleships = Battleships.new
-  #   battleships.create_grid
-  #   expect(battleships.place_ship(0)).to eq("X.........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........")
-  # end
-
-  it 'has a method to allow you to place a 3 cell ship' do
+  it 'has a method to allow you to place a 3 cell ship horizontally' do
     battleships = Battleships.new
     battleships.create_grid
-    expect(battleships.place_ship_horizontal(0)).to eq("XXX.......\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........")
+    expect(battleships.place_ship_horizontal(0)).to eq("OOO.......\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........")
+  end
+
+  it 'prevents you from placing a horizontal ship outside grid' do
+    battleships = Battleships.new
+    battleships.create_grid
+    expect(battleships.place_ship_horizontal(9)).to eq("Cannot place ship ouf of bounds. Try again")
   end
 end
