@@ -2,7 +2,7 @@ class Battleships
   attr_reader :board
 
   def initialize
-    @board = "..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n.........."
+    @board = "..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n"
   end
 
   def view_board
@@ -19,7 +19,7 @@ class Battleships
     end
 
   def place_ship_vertical(index)
-    if index > 76
+    if index > 87
       "Cannot place ship ouf of bounds. Try again"
     else
       3.times do
