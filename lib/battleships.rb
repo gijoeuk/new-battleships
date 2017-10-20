@@ -21,15 +21,20 @@ class Battleships
       3.times do
         @board[index] = "O"
         index += 11
-      end
+    end
       @board
     end
   end
 
 
   def attack(index)
-    @board[index] = "X"
-    @board
+    if @board[index] == "O"
+      @board[index] = "X"
+      "HIT!!"
+    else
+      @board[index] = "X"
+      "MISSED!!"
+    end
   end
 end
 

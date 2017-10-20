@@ -23,6 +23,12 @@ describe 'Battleships' do
   end
 
   it 'allows a player to attack the board' do
-    expect(battleships.attack(14)).to eq("..........\n...X......\n..........\n..........\n..........\n..........\n..........\n..........\n..........")
+    battleships.attack(14)
+    expect(battleships.board).to eq("..........\n...X......\n..........\n..........\n..........\n..........\n..........\n..........\n..........")
+  end
+
+  it 'lets player know if they hit a ship' do
+    battleships.place_ship_horizontal(14)
+    expect(battleships.attack(15)).to eq("HIT!!")
   end
 end
