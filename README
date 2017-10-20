@@ -11,6 +11,9 @@ use battleships.place_ship_horizontal(index) to place a ship horizontally.
 Pass in the index where you want to place the ship. The ship will be 3 cells long and will
 be placed in your index and the two cells to the left, so be careful not to overlap
 
+use battleships.place_ship_vertically(index) to place a ship vertically.
+Pass in the index where you want to place the ship. The ship will be 3 cells long and will
+be placed in your index and the two cells below it, so be careful not to overlap
 
 https://github.com/gijoeuk/battleships-techtest-ruby.git
 

@@ -3,8 +3,12 @@ require 'Battleships'
 describe 'Battleships' do
   let( :battleships ){ Battleships.new }
   it 'initializes with an instance of Battleships' do
-      expect(battleships).to be_instance_of(Battleships)
-    end
+    expect(battleships).to be_instance_of(Battleships)
+  end
+
+  it 'allows player to see the current game state' do
+    expect(battleships.view_board).to eq("..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........")
+  end
 
   it "initializes with a grid of 10x10 dots" do
     expect(battleships.board).to eq("..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........")
@@ -31,4 +35,5 @@ describe 'Battleships' do
     battleships.place_ship_horizontal(14)
     expect(battleships.attack(15)).to eq("HIT!!")
   end
+
 end
