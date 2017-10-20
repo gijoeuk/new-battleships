@@ -1,5 +1,7 @@
 class Battleships
-  def create_grid
+  attr_reader :board
+  
+  def initialize
     @board = "..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n.........."
   end
 
