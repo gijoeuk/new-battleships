@@ -36,4 +36,10 @@ describe 'Battleships' do
     expect(battleships.attack(15)).to eq("HIT!!")
   end
 
+  # it 'lets player know if they sunk ship' do
+  #   battleships.place_ship_horizontal(14)
+  #   battleships.attack(14)
+  #   battleships.attack(15)
+  #   expect(battleships.attack(16)).to eq("Ship sunk")
+  # end
 end
