@@ -6,7 +6,7 @@ describe 'Battleships' do
     expect(battleships).to be_instance_of(Battleships)
   end
 
-  it 'allows player to see the current game state' do
+  it 'allows player to see the current game state in 2d' do
     expect(battleships.view_board).to eq("..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........")
   end
 
