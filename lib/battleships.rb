@@ -1,6 +1,6 @@
 class Battleships
   attr_reader :board
-  
+
   def initialize
     @board = "..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n.........."
   end
@@ -24,6 +24,12 @@ class Battleships
       end
       @board
     end
+  end
+
+
+  def attack(index)
+    @board[index] = "X"
+    @board
   end
 end
 
