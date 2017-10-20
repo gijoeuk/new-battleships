@@ -1,4 +1,4 @@
-require 'Ship'
+require_relative 'Ship'
 
 class Battleships
   attr_reader :board
@@ -16,7 +16,7 @@ class Battleships
       if outofbounds.include?(index)
         "Cannot place ship ouf of bounds. Try again"
       else
-        @ship = Ship.new(index)
+        @ship = Ship.new(index, 'H')
         @ship.coordinates.each{|i| @board[i] = "O" }
       end
     end
@@ -25,18 +25,15 @@ class Battleships
     if index > 87
       "Cannot place ship ouf of bounds. Try again"
     else
-      3.times do
-        @board[index] = "O"
-        index += 11
-    end
-      @board
+      @ship = Ship.new(index, 'V')
+      p @ship
+      @ship.coordinates.each{|i| @board[i] = "O" }
     end
   end
 
   def attack(index)
-    if @board[index] == "O"
-      @board[index] = "X"
-      # @ship.sunk == true ? "Ship sunk" :
+    if @ship.coordinates.include?(index)
+      @board[index] = "*"
       "HIT!!"
     else
       @board[index] = "X"

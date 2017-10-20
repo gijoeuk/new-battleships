@@ -24,12 +24,15 @@ describe 'Battleships' do
   end
 
   it 'has a method to allow you to place a vertical ship' do
-    expect(battleships.place_ship_vertical(0)).to eq("O.........\nO.........\nO.........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n")
+    battleships.place_ship_vertical(0)
+    expect(battleships.board).to eq("O.........\nO.........\nO.........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n")
   end
 
-  it 'allows a player to attack the board' do
+  it 'allows a player to see attack and see all hits on the board' do
+    battleships.place_ship_horizontal(13)
     battleships.attack(14)
-    expect(battleships.board).to eq("..........\n...X......\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n")
+    battleships.attack(15)
+    expect(battleships.board).to eq("..........\n..O**.....\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n")
   end
 
   it 'lets player know if they hit a ship' do
