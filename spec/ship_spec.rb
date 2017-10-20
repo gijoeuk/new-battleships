@@ -9,4 +9,8 @@ describe 'Ship' do
   it 'initializes with three consecutive indices when placed horizontally' do
     expect(ship.coordinates).to eq([1,2,3])
   end
+
+  it 'initializes with as floating' do
+    expect(ship.float_status).to eq('floating')
+  end
 end

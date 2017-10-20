@@ -15,7 +15,8 @@ describe 'Battleships' do
   end
 
   it 'has a method to allow you to place a 3 cell ship horizontally' do
-    expect(battleships.place_ship_horizontal(0)).to eq("OOO.......\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n")
+    battleships.place_ship_horizontal(0)
+    expect(battleships.board).to eq("OOO.......\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n")
   end
 
   it 'prevents you from placing a horizontal ship outside grid' do
