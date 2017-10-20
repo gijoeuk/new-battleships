@@ -10,7 +10,8 @@ class Battleships
   end
 
   def place_ship_horizontal(index)
-      if index % 10 > 8
+    outofbounds = [8,9,20,21,30,31,41,42,52,53,63,64,74,75,85,86,96,97,107,108]
+      if outofbounds.include?(index)
         "Cannot place ship ouf of bounds. Try again"
       else
         @board[index..(index+2)]= "OOO"
