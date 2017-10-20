@@ -2,11 +2,11 @@ class Battleships
   attr_reader :board
 
   def initialize
-    @board = "..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n.........."
+    @board = "..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n..........\n.........."
   end
 
   def view_board
-    p @board
+    return @board
   end
 
   def place_ship_horizontal(index)

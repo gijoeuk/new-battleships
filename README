@@ -17,6 +17,7 @@ be placed in your index and the two cells below it, so be careful not to overlap
 
 use battleships.attach(index) to attack the board
 game will let you know if you HIT!! or MISSED!!
+
 https://github.com/gijoeuk/battleships-techtest-ruby.git
 
 As a player
